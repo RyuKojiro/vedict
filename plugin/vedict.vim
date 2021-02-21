@@ -27,6 +27,7 @@ import sys
 if not lib in sys.path:
     sys.path.append(lib)
 
+from importlib import reload
 import config
 reload(config)
 
