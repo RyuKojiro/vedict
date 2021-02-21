@@ -2,7 +2,7 @@
 # vim: set fileencoding=utf-8 :
 #highlight Folded guibg=darkgrey guifg=blue
 
-import os,codecs,pickle,re,random
+import os,codecs,json,re,random
 from config import default_dic_path
 
 class EdictResult(list):
@@ -113,13 +113,13 @@ class Edict(object):
 
 	def save_index(self,limit=None):
 		fp=open(self.path_index,'w')
-		pickle.dump(self.index,fp)
+		json.dump(self.index,fp)
 		fp.close()
 
 	def load_index(self,limit=None):
 		if os.path.exists(self.path_index):
 			fp=open(self.path_index,'r')
-			self.index=pickle.load(fp)
+			self.index=json.load(fp)
 			fp.close()
 		pass
 	
