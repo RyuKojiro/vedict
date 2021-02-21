@@ -2,7 +2,7 @@
 # vim: set fileencoding=utf-8 :
 #highlight Folded guibg=darkgrey guifg=blue
 
-import os,codecs,json,re,random
+import os,codecs,json,re
 from config import default_dic_path
 
 class EdictResult(list):
@@ -79,7 +79,7 @@ class Edict(object):
 		if self.index==None:
 			offset=0
 		elif index_char==None or not self.index.has_key(index_char):
-			i=random.randint(0,len(self.index.values())-1)
+			i=(len(self.index.values())-1)/2 #random.randint(0,len(self.index.values())-1)
 			offset=self.index.values()[i]
 		else:
 			offset=self.index[index_char]
