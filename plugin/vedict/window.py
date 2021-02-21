@@ -16,7 +16,7 @@ def MapAppendCascaded(lhs, rhs, mapMode):
     else:
         slf = lhs
     cmd=mapMode + 'oremap  <buffer> <silent> ' +  lhs + ' ' + slf + rhs
-    #print cmd
+    #print(cmd)
     vim.command(cmd)
 
 
@@ -230,8 +230,8 @@ class Window(object):
     def test():
         w=Window('w')
         w.open()
-        print w.last_buffer
-        print w.last_winnr
+        print(w.last_buffer)
+        print(w.last_winnr)
     pass
 
 

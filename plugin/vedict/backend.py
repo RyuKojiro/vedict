@@ -81,7 +81,7 @@ class ManagerBackend(dict):
     def unload(self, name):
         """ Unregister a dictionary """
         if not self.has_key(name):
-            print "Dictionary not found."
+            print("Dictionary not found.")
         else:
             self.pop(name)
         pass

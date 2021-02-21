@@ -107,7 +107,7 @@ class Edict(object):
 				matched=True
 				yield EdictResult(self,offset,line)
 			elif (not wildcard) and matched:
-				print 'breaking'
+				print('breaking')
 				break
 		pass
 
@@ -159,7 +159,7 @@ class Edict(object):
 		dic=Edict(path,fname)
 		dic.load_index()
 		for r in dic.grep('.*漢字'.decode(enc)):
-			print r.__repr__().encode(enc)
+			print(r.__repr__().encode(enc))
 		pass
 
 class GrepResult(list):
@@ -226,6 +226,6 @@ class GrepFile(object):
 		path=os.path.join(default_dic_path,fname)
 		dic=GrepFile(path,fname)
 		for r in dic.grep('.*漢字'.decode(enc)):
-			print r.__repr__().encode(enc)
+			print(r.__repr__().encode(enc))
 		pass
 pass

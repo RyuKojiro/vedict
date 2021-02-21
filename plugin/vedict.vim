@@ -17,7 +17,7 @@ import vim, os
 dbg=vim.eval('dbg')
 
 if not dbg:
-    print 'put production initializer here'
+    print('put production initializer here')
     vim.command('finish')
 
 # nobble path for libs
@@ -59,7 +59,7 @@ vim.command('command! -nargs=* Vedict exec(\'py %s.command(<q-args>)\')' % root_
 	#enc='utf8'
 	#dic=GrepFile(path,fname)
 	#for r in dic.grep('.*漢字'.decode(enc)):
-		##print r.__repr__().encode(enc)
+		##print(r.__repr__().encode(enc))
 		#pass
 
 	#import window

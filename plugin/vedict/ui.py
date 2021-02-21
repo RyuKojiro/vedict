@@ -38,7 +38,7 @@ class Manager(ManagerBackend):
 
     def command(self,*args):
         if len(args)==0:
-            print Manager.usage % "Vedict"
+            print(Manager.usage % "Vedict")
             return
 
         # deal with args like this: one "two two" three four "five" "six six"
@@ -50,7 +50,7 @@ class Manager(ManagerBackend):
         if self._commands.has_key(cmd):
             self._commands[cmd](*args[1:])
         else:
-            print 'command %s not found!' %cmd
+            print('command %s not found!' %cmd)
         pass
 
     def preview(self, *args):
