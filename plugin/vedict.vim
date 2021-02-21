@@ -10,7 +10,7 @@ else
 endif
 let g:vedict_loaded=1
 
-python << EOF
+python3 << EOF
 #  lets python ignore everything above this line (docstring). """
 
 import vim, os
